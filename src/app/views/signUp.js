@@ -10,7 +10,7 @@ import background from '../assets/images/background2.jpg'
 function SignUp () {
 
     return (
-      <div className="uk-height-large uk-flex uk-flex-around uk-flex-middle uk-background-cover uk-light" data-srcset={background} uk-img='true'>
+      <div className="signuplogin-background uk-height-large uk-flex uk-flex-around uk-flex-top uk-background-cover uk-light" data-srcset={background} uk-img='true'>
         <AuthForm/>
       </div>
 
