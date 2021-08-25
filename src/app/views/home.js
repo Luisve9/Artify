@@ -10,9 +10,9 @@ function Home () {
     return (
         <div>
             <NavBar/>
-            <hr class="uk-divider-icon"></hr>
+            <hr className="uk-divider-icon"></hr>
             <Intro/>
-            <hr class="uk-divider-icon"></hr>
+            <hr className="uk-divider-icon"></hr>
         </div>
     )
 }

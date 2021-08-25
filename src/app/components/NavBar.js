@@ -1,5 +1,6 @@
 import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
+import {Link} from 'react-router-dom';
 
 const NavBar = () => (
     <nav className="uk-navbar-container uk-margin" uk-navbar='true'>
@@ -20,13 +21,13 @@ const NavBar = () => (
                         Nuestro equipo
                     </a>
                 </li>
+                <li>
+                    <Link to = {{pathname :'signup'}}>Sign up</Link>
+                </li>
+                <li>
+                    <Link to = {{pathname :'login'}}>Log in</Link>
+                </li>
             </ul>
-
-            <div className="uk-navbar-item">
-                <form>
-                    <button className="uk-button uk-button-default">Log in</button>
-                </form>
-            </div>
         </div>
     </nav>
 )
