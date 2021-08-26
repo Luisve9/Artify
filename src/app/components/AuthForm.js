@@ -19,6 +19,16 @@ const AuthForm = () => {
         return false
     }
 
+    const handleRole = (userRole) => {
+        let route
+        switch (userRole) {
+            case "Admin": route = "/admin"; break;
+            case "User": route = "/browse"; break;
+            case "Creator": route = "/menuCreator"; break;
+        }
+        return route
+    }
+
     const onSubmit = (e) => {
         e.preventDefault()
         if(handleRoute()) {
@@ -32,7 +42,7 @@ const AuthForm = () => {
             loginEndpoint(data)
                 .then( res => {
                     localStorage.setItem("data",JSON.stringify(res.data.result))
-                    history.push('/menuCreator')
+                    history.push(handleRole(res.data.result.role))
                 })
                 .catch()
         }
