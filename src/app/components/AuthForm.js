@@ -1,7 +1,6 @@
 import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
 import { useHistory } from "react-router";
-import {Link} from 'react-router-dom';
 import './styles/compStyles.css';
 import React, {useState, useEffect} from 'react';
 import {loginEndpoint, signupEndpoint} from '../services/auth-ws';

@@ -10,10 +10,8 @@ const DesignForm = () => {
     
 
     const handleChange = (e) => {
-        setData({...data, [e.target.name]:e.target.value })
-        //not good
         const {_id} = JSON.parse(localStorage.getItem("data"))
-        setData({...data, _creator: _id})
+        setData({...data, [e.target.name]:e.target.value, _creator: _id})
     }
 
     const handleTags = (e) => {
@@ -30,16 +28,18 @@ const DesignForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-    
+        
         const formData = new FormData();
         for(let key in data) {
             formData.append(key, data[key])
         }
+        
         createDesignEndPoint(formData)
             .then(res => {
                 console.log("I was created")
             })
             .catch()
+        
     }
 
     const uploadFile = (e) => {
@@ -47,7 +47,7 @@ const DesignForm = () => {
     }
 
     return(
-        <form onSubmit={onSubmit} className="uk-form-stacked authForm">
+        <form onSubmit={onSubmit} className="uk-form-stacked designForm">
 
             <div className="uk-margin">
                 <div className="uk-form-controls">
@@ -55,7 +55,7 @@ const DesignForm = () => {
                 </div>
             </div>
 
-            <span className =".uk-text-default">Select the relevant Tags so the user can find you work according their interest</span>
+            <span className =".uk-text-default">Select the relevant Tags so the user can find your work according their interest</span>
 
             <div className="uk-margin uk-grid-small uk-child-width-auto uk-grid">
                 <label><input className="uk-checkbox" type="checkbox" value="Abstract" onChange={handleTags}/> Abstract</label>

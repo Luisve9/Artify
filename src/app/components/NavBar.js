@@ -12,14 +12,17 @@ const NavBar = () => (
                 <li>
                     <a href="#">
                         <span className="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
-                        Conocenos
+                        Artify
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span className="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
-                        Nuestro equipo
+                        Our Team
                     </a>
+                </li>
+                <li>
+                    <Link to = {{pathname :'browse'}}>Browse for Designs</Link>
                 </li>
                 <li>
                     <Link to = {{pathname :'signup'}}>Sign up</Link>
