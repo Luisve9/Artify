@@ -10,10 +10,7 @@ const NavBar = () => (
 
             <ul className="uk-navbar-nav">
                 <li>
-                    <a href="#">
-                        <span className="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
-                        Artify
-                    </a>
+                    <Link to = {{pathname :'/'}}>Artify</Link>
                 </li>
                 <li>
                     <a href="#">
