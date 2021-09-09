@@ -1,5 +1,6 @@
 import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
+import UIkit from 'uikit';
 import './styles/compStyles.css';
 import React, {useState, useEffect} from 'react';
 import { createDesignEndPoint } from "../services/design-ws";
@@ -7,7 +8,7 @@ import { createDesignEndPoint } from "../services/design-ws";
 const DesignForm = () => {
     const [data,setData] = useState({})
     const [selectedTags, setTags] = useState([])
-    
+    const [disableButton, setButton] = useState(false)
 
     const handleChange = (e) => {
         const {_id} = JSON.parse(localStorage.getItem("data"))
@@ -25,9 +26,13 @@ const DesignForm = () => {
         setData({...data, tags: selectedTags})
     }
 
+    const handleSubmit = () => {
+        
+    }
 
     const onSubmit = (e) => {
         e.preventDefault()
+        setButton(true)
         
         const formData = new FormData();
         for(let key in data) {
@@ -36,9 +41,13 @@ const DesignForm = () => {
         
         createDesignEndPoint(formData)
             .then(res => {
-                console.log("I was created")
+                UIkit.notification("Carga exitosa", {status:'success'})
+                setButton(false)
             })
-            .catch()
+            .catch( err => {
+                UIkit.notification("No se pudo cargar: tamaño max = 20 MB; Formatos soportados: jpg, png, jpeg", {status:'danger'})
+                setButton(false)
+            })
         
     }
 
@@ -79,7 +88,7 @@ const DesignForm = () => {
             </div>
 
             <div className="uk-margin">
-                <button className="uk-button uk-button-default uk-button-large uk-width-1-1">Upload design</button>
+                <button className="uk-button uk-button-default uk-button-large uk-width-1-1" disabled={disableButton}>Upload design</button>
             </div>
         </form>
     )

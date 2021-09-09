@@ -45,12 +45,14 @@ function MyDesigns () {
     return (
         <div>
             <NavCreator/>
-            <h1>My designs</h1>
-            {
-                data.map((design, index) => (
-                    <CardDesign key={index} designData={design} handler={handleClick} update={true} />
-                ))
-            }
+            <h1 className="uk-heading-medium uk-heading-bullet">Mis diseños</h1>
+            <div className="uk-child-width-1-3" uk-grid="true">
+                {
+                    data.map((design, index) => (
+                        <CardDesign key={index} designData={design} handler={handleClick} update={true} download={true}/>
+                    ))
+                }  
+            </div>
             <h2>Edit</h2>
             <h3>Check the box "Edit" if you wish to change your designs title or tags</h3>
             {

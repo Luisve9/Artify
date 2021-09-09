@@ -6,10 +6,15 @@ import Intro from '../components/Intro';
 import NavBar from '../components/NavBar';
 
 function Home () {
+    const [islogged, setLogged] = useState(false)
+
+    useEffect(()=>{
+        if(JSON.parse(localStorage.getItem("data"))) setLogged(true)
+    },[])
 
     return (
         <div>
-            <NavBar/>
+            <NavBar logged={islogged}/>
             <hr className="uk-divider-icon"></hr>
             <Intro/>
             <hr className="uk-divider-icon"></hr>
