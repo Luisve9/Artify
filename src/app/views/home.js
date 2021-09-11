@@ -26,7 +26,7 @@ function Home () {
             <hr className="uk-divider-icon"></hr>
             <DesignsByTag tag="Textures"/>
             <hr className="uk-divider-icon"></hr>
-            <DesignsByTag tag="Beauty/Fashion"/>
+            <DesignsByTag tag="Fashion"/>
             <hr className="uk-divider-icon"></hr>
             <DesignsByTag tag="Landscape"/>
             <hr className="uk-divider-icon"></hr>

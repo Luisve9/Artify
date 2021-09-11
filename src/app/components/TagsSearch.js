@@ -24,7 +24,7 @@ const TagsSearch = ({handler}) => {
                 <label><input className="uk-checkbox" type="checkbox" value="Nature" onChange={handleTags}/> Nature</label>
                 <label><input className="uk-checkbox" type="checkbox" value="Art" onChange={handleTags}/> Art</label>
                 <label><input className="uk-checkbox" type="checkbox" value="Textures" onChange={handleTags}/> Textures</label>
-                <label><input className="uk-checkbox" type="checkbox" value="Beauty/Fashion" onChange={handleTags}/> Beauty/Fashion</label>
+                <label><input className="uk-checkbox" type="checkbox" value="Fashion" onChange={handleTags}/> Fashion</label>
                 <label><input className="uk-checkbox" type="checkbox" value="Landscape" onChange={handleTags}/> Landscape</label>
                 <label><input className="uk-checkbox" type="checkbox" value="Photograph" onChange={handleTags}/> Photograph</label>
                 <label><input className="uk-checkbox" type="checkbox" value="Digital design" onChange={handleTags}/> Digital design</label>

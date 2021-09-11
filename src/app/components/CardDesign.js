@@ -11,6 +11,7 @@ const CardDesign = (props) => {
     let card;
     let edit;
     let downloadButton;
+    let image;
 
     const {imgDesign, title, _creator, tags} = designData
 
@@ -34,16 +35,25 @@ const CardDesign = (props) => {
 
     if(download) {
         downloadButton = <a className="uk-button uk-button-default" onClick={handleDownload}>Access image</a>
+        image = 
+            <div className="uk-card-media-top" uk-lightbox ="true">
+                <a className="uk-inline" href={imgDesign}>
+                    <img data-srcset={imgDesign} alt={title} uk-img="true"/>                
+                </a>
+            </div>
+    } else {
+        image =
+            <div className="uk-card-media-top">
+                <ReactWaterMark waterMarkText="Artify" options={{chunkWidth: 100, chunkHeight: 60, fillStyle: '#FFFFFF'}}>
+                    <img data-srcset={imgDesign} alt={title} uk-img="true"/>
+                </ReactWaterMark>
+            </div>
     }
 
     if(Object.keys(designData).length > 0){
         card =
                 <div className="uk-card uk-card-default uk-animation-scale-down">
-                    <div className="uk-card-media-top" uk-lightbox ="true">
-                        <a className="uk-inline" href={imgDesign}>
-                            <img data-srcset={imgDesign} alt={title} uk-img="true"/>
-                        </a>
-                    </div>
+                    {image}
                     <div className="uk-card-body">
                         <h3 className="uk-card-title">{title}</h3>
                         <p>Tags: {tags}</p>
