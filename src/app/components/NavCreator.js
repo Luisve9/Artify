@@ -38,6 +38,11 @@ const NavCreator = () => {
                             Log out
                         </a>
                     </li>
+                    <li>
+                        <a href="#">
+                            <Link to = {{pathname :'/myProfile'}}>My Profile</Link>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

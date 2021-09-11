@@ -3,6 +3,7 @@ import "uikit/dist/css/uikit-core.min.css";
 import {Link} from 'react-router-dom';
 import { logoutEndpoint } from '../services/auth-ws';
 import { useHistory } from "react-router";
+import React from 'react';
 
 const NavBar = (props) => {
     const history = useHistory();
@@ -14,7 +15,8 @@ const NavBar = (props) => {
         logoutEndpoint()
             .then(res => {
                 localStorage.removeItem('data')
-                history.push('/')
+                history.push('/') 
+                window.location.reload();
             })
             .catch()
     }

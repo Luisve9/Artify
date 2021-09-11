@@ -38,7 +38,6 @@ const CardDesign = (props) => {
 
     if(Object.keys(designData).length > 0){
         card =
-            <div>
                 <div className="uk-card uk-card-default uk-animation-scale-down">
                     <div className="uk-card-media-top" uk-lightbox ="true">
                         <a className="uk-inline" href={imgDesign}>
@@ -53,7 +52,7 @@ const CardDesign = (props) => {
                         {downloadButton}
                     </div>
                 </div>
-            </div>
+            
     }
 
     return(
