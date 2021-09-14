@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
 import "./styles/compStyles.css";
-import { BrowserRouter, Link } from 'react-router-dom';
 import ReactWaterMark from 'react-watermark-component';
 import FileSaver, { saveAs } from 'file-saver';
+import { sendEmailEndPoint } from '../services/user-ws';
+import UIkit from 'uikit';
 
 const CardDesign = (props) => {
     const {designData, handler, update, download} = props
@@ -12,6 +13,7 @@ const CardDesign = (props) => {
     let edit;
     let downloadButton;
     let image;
+    let sendmail;
 
     const {imgDesign, title, _creator, tags} = designData
 
@@ -29,11 +31,24 @@ const CardDesign = (props) => {
         FileSaver.saveAs(imgDesign, `${title}.${extension}`)
     }
 
+    const handleEmail = () => {
+        const {email} = JSON.parse(localStorage.getItem("data"))
+
+        sendEmailEndPoint({email: _creator.email, contactUser: email})
+            .then(res => {
+                UIkit.notification("Correo se envió con exito", {status:'success'})
+            })
+            .catch( err => {
+                UIkit.notification("tuvimos un problema intente mas tarde", {status:'danger'})
+            })
+    }
+
     if(update) {
         edit = <label><input className="uk-checkbox" type="checkbox" value="Edit" onChange={handleClick}/>Edit</label>;
     }
 
     if(download) {
+        sendmail = <a className="uk-button uk-button-default" onClick={handleEmail}> Contact artist</a>
         downloadButton = <a className="uk-button uk-button-default" onClick={handleDownload}>Access image</a>
         image = 
             <div className="uk-card-media-top" uk-lightbox ="true">
@@ -60,6 +75,7 @@ const CardDesign = (props) => {
                         <p>Artist: {_creator.username}</p>
                         {edit}
                         {downloadButton}
+                        {sendmail}
                     </div>
                 </div>
             

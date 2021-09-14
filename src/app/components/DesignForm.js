@@ -26,10 +26,6 @@ const DesignForm = () => {
         setData({...data, tags: selectedTags})
     }
 
-    const handleSubmit = () => {
-        
-    }
-
     const onSubmit = (e) => {
         e.preventDefault()
         setButton(true)

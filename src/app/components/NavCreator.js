@@ -24,23 +24,14 @@ const NavCreator = () => {
 
                 <ul className="uk-navbar-nav">
                     <li>
-                        <a href="#">
-                            <Link to = {{pathname :'/menuCreator/myDesigns'}}>My Designs</Link>
-                        </a>
+                        <Link to = {{pathname :'/menuCreator/myDesigns'}}>My Designs</Link>
                     </li>
                     <li>
-                        <a href="#">
-                            <Link to = {{pathname :'/menuCreator'}}>New Upload</Link>
-                        </a>
+                        <Link to = {{pathname :'/menuCreator'}}>New Upload</Link>
                     </li>
                     <li>
                         <a href="#"  onClick={handleLogOut}>
                             Log out
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <Link to = {{pathname :'/myProfile'}}>My Profile</Link>
                         </a>
                     </li>
                 </ul>

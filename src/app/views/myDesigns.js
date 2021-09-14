@@ -12,7 +12,8 @@ function MyDesigns () {
     const [edit,setEdit] = useState([])
     const [change, setChange] = useState(false)
     useEffect(()=>{
-        getDesignByIdEndPoint()
+        const {_id} = JSON.parse(localStorage.getItem("data"))
+        getDesignByIdEndPoint(_id)
             .then(res =>{
                 setData(res.data.designs)
             })

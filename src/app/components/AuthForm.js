@@ -2,7 +2,7 @@ import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
 import { useHistory } from "react-router";
 import './styles/compStyles.css';
-import React, {useState, useEffect} from 'react';
+import React, {useState } from 'react';
 import {loginEndpoint, signupEndpoint} from '../services/auth-ws';
 
 const AuthForm = () => {

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
 import { getAllDesignEndPoint } from "../services/design-ws";
-import { loggedInEndpoint } from "../services/auth-ws";
 import CardDesign from '../components/CardDesign';
 import TagsSearch from '../components/TagsSearch';
 import NavBar from '../components/NavBar';
