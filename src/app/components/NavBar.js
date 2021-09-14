@@ -49,12 +49,6 @@ const NavBar = (props) => {
                     <li>
                         <Link to = {{pathname :'/'}}>Artify</Link>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span className="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
-                            Our Team
-                        </a>
-                    </li>
                     {logout}
                     {signup}
                     {login}
