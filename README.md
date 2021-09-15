@@ -1,3 +1,17 @@
+# Start the project
+
+Clone this repo
+
+To install all dependecies run in the project directory
+### `yarn` 
+
+## In "src/app/services/api.js"
+Modify line seven to include your production and local environment of your Back End. 
+### `const baseURL = iProdcution ? "<Prod>" : "<Local>"`
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
