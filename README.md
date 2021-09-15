@@ -1,4 +1,4 @@
-# Artify Back
+# Artify Front
 Front End of an application that allows designers and photographers to upload their work and establish contact with interested consumers.
 
 # Start the project
