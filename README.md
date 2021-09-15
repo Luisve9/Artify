@@ -1,3 +1,6 @@
+# Artify Back
+Front End of an application that allows designers and photographers to upload their work and establish contact with interested consumers.
+
 # Start the project
 
 Clone this repo
@@ -9,8 +12,8 @@ To install all dependecies run in the project directory
 Modify line seven to include your production and local environment of your Back End. 
 ### `const baseURL = iProdcution ? "<Prod>" : "<Local>"`
 
-
-
+## See the back end
+https://github.com/Luisve9/Artify-Back
 
 # Getting Started with Create React App
 
