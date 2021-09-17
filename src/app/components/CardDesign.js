@@ -44,12 +44,12 @@ const CardDesign = (props) => {
     }
 
     if(update) {
-        edit = <label><input className="uk-checkbox" type="checkbox" value="Edit" onChange={handleClick}/>Edit</label>;
+        edit = <label><input className="uk-checkbox" type="checkbox" value="Edit" onChange={handleClick}/>Editar</label>;
     }
 
     if(download) {
-        sendmail = <a className="uk-button uk-button-default" onClick={handleEmail}> Contact artist</a>
-        downloadButton = <a className="uk-button uk-button-default" onClick={handleDownload}>Access image</a>
+        sendmail = <a className="uk-button uk-button-default" onClick={handleEmail}> Contactar</a>
+        downloadButton = <a className="uk-button uk-button-default" onClick={handleDownload}>Acceder imagen</a>
         image = 
             <div className="uk-card-media-top" uk-lightbox ="true">
                 <a className="uk-inline" href={imgDesign}>
@@ -72,7 +72,7 @@ const CardDesign = (props) => {
                     <div className="uk-card-body">
                         <h3 className="uk-card-title">{title}</h3>
                         <p>Tags: {tags}</p>
-                        <p>Artist: {_creator.username}</p>
+                        <p>Artista: {_creator.username}</p>
                         {edit}
                         {downloadButton}
                         {sendmail}

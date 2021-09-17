@@ -20,14 +20,14 @@ const NavCreator = () => {
         <nav className="uk-navbar-container" uk-navbar='true'>
             <div className="uk-navbar-left">
 
-                <a className="uk-navbar-item uk-logo" href="#">LogoC</a>
+                <a className="uk-navbar-item uk-logo" href="#">Artify</a>
 
                 <ul className="uk-navbar-nav">
                     <li>
-                        <Link to = {{pathname :'/menuCreator/myDesigns'}}>My Designs</Link>
+                        <Link to = {{pathname :'/menuCreator/myDesigns'}}>Mis diseños</Link>
                     </li>
                     <li>
-                        <Link to = {{pathname :'/menuCreator'}}>New Upload</Link>
+                        <Link to = {{pathname :'/menuCreator'}}>Cargar nuevo</Link>
                     </li>
                     <li>
                         <a href="#"  onClick={handleLogOut}>

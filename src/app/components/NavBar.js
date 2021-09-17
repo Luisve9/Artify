@@ -43,7 +43,7 @@ const NavBar = (props) => {
         <nav className="uk-navbar-container uk-margin" uk-navbar='true'>
             <div className="uk-navbar-left">
 
-                <a className="uk-navbar-item uk-logo" href="#">Logo</a>
+                <a className="uk-navbar-item uk-logo" href="#">Artify</a>
 
                 <ul className="uk-navbar-nav">
                     <li>
@@ -53,7 +53,7 @@ const NavBar = (props) => {
                     {signup}
                     {login}
                     <li>
-                        <Link to = {{pathname :'browse'}}>Browse for Designs</Link>
+                        <Link to = {{pathname :'browse'}}>Ver diseños</Link>
                     </li>
                     
                 </ul>

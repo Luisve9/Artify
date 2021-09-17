@@ -38,7 +38,7 @@ function DesignsByTag ({tag}) {
                 <a className="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large DesignByTag-slideColor" href="#" uk-slidenav-next="true" uk-slider-item="next"></a>
             </div>
     } else {
-        content = <p>no existen diseños con esta tag, haz tu cuenta de creador y se el primero en cargar</p>
+        content = <p>   No existen diseños con esta tag, haz tu cuenta de creador y se el primero en cargar</p>
     }
     return (
         <div>

@@ -56,8 +56,8 @@ const AuthForm = () => {
             <div className="uk-margin">
 
                 <div className="uk-form-controls">
-                    <label><input className="uk-radio" type="radio" name="role" value="Creator" onChange={handleChange}/> Creator</label><br/>
-                    <label><input className="uk-radio" type="radio" name="role" value="User" onChange={handleChange}/> Consumer</label>
+                    <label><input className="uk-radio" type="radio" name="role" value="Creator" onChange={handleChange}/> Creador</label><br/>
+                    <label><input className="uk-radio" type="radio" name="role" value="User" onChange={handleChange}/> Usuario</label>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ const AuthForm = () => {
 
             <div className="uk-margin">
                 <div className="uk-form-controls">
-                    <input className="uk-input" id="form-stacked-text" type="text" name='password' placeholder="Password" onChange={handleChange}/>
+                    <input className="uk-input" id="form-stacked-text" type="password" name='password' placeholder="Password" onChange={handleChange}/>
                 </div>
             </div>
 

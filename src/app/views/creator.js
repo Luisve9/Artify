@@ -12,7 +12,7 @@ function Creator () {
         <div>
             <NavCreator/>
             <div className="signuplogin-background uk-height-large uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-background-cover uk-light" data-srcset={backgroundCreator} uk-img='true'>
-                <h1 className="uk-heading-small uk-heading-divider">Upload your design below</h1>
+                <h1 className="uk-heading-small uk-heading-divider">Carga tu diseño</h1>
                 <DesignForm/>
             </div>
         </div>

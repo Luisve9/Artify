@@ -54,8 +54,8 @@ function MyDesigns () {
                     ))
                 }  
             </div>
-            <h2>Edit</h2>
-            <h3>Check the box "Edit" if you wish to change your designs title or tags</h3>
+            <h2 className="uk-heading-medium uk-heading-bullet">Editar</h2>
+            <h3 className="uk-heading-small">Selecciona los diseños que deseas editar</h3>
             {
                 edit.map((design, index) => (
                     <EditDesignForm key={index} editDesign={design}/>

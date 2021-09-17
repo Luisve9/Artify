@@ -61,24 +61,24 @@ const EditDesignForm = (props) => {
                 <span className =".uk-text-default">Select new tags</span>
 
                 <div className="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                    <label><input className="uk-checkbox" type="checkbox" value="Abstract" onChange={handleTags}/> Abstract</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Nature" onChange={handleTags}/> Nature</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Art" onChange={handleTags}/> Art</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Textures" onChange={handleTags}/> Textures</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Beauty/Fashion" onChange={handleTags}/> Beauty/Fashion</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Landscape" onChange={handleTags}/> Landscape</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Photograph" onChange={handleTags}/> Photograph</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Digital design" onChange={handleTags}/> Digital design</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="Food" onChange={handleTags}/> Food</label>
-                    <label><input className="uk-checkbox" type="checkbox" value="VideoGames" onChange={handleTags}/> VideoGames</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Abstract" onChange={handleTags}/> Abstracto</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Nature" onChange={handleTags}/> Naturaleza</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Art" onChange={handleTags}/> Arte</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Textures" onChange={handleTags}/> Texturas</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Beauty/Fashion" onChange={handleTags}/> Fashion</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Landscape" onChange={handleTags}/> Paisajes</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Photograph" onChange={handleTags}/> Fotografia</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Digital design" onChange={handleTags}/> Diseño Digital</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="Food" onChange={handleTags}/> Comida</label>
+                    <label><input className="uk-checkbox" type="checkbox" value="VideoGames" onChange={handleTags}/> Videojuegos</label>
                 </div>
 
                 <div className="uk-margin">
-                    <button className="uk-button uk-button-default uk-button-large uk-width-1-1">Edit design</button>
+                    <button className="uk-button uk-button-default uk-button-large uk-width-1-1">Editar diseño</button>
                 </div>
             </form>
             <div className="uk-margin">
-                <button className="uk-button uk-button-default uk-button-large uk-width-1-1" onClick={handleDelete} >Delete design</button>
+                <button className="uk-button uk-button-default uk-button-large uk-width-1-1" onClick={handleDelete} >Borrar diseño</button>
             </div>
             <hr className="uk-divider-icon"></hr>
         </div>
